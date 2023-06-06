@@ -1,10 +1,9 @@
 <<<<<<< HEAD
 # facerecognition
 
-This function in App.js due to security issues have to be replaced to the backend.
-const returnClaReqOpt = (imageUrl) => {
-...
-} 
+This following function in App.js: 
+const returnClaReqOpt = (imageUrl) => {...}
+due to security issues have to be replaced to the backend.
 Will be changed in the next version.
 
 =======
