@@ -1,5 +1,12 @@
 <<<<<<< HEAD
 # facerecognition
+
+This function in App.js due to security issues have to be replaced to the backend.
+const returnClaReqOpt = (imageUrl) => {
+...
+} 
+Will be changed in the next version.
+
 =======
 # Getting Started with Create React App
 
