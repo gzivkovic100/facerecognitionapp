@@ -12,7 +12,6 @@ import Register from './components/Register/Register';
 import './App.css';
 
 
-
 const returnClaReqOpt = (imageUrl) => {
   // Your PAT (Personal Access Token) can be found in the portal under Authentification
   const PAT = 'hier commes the PAT';
