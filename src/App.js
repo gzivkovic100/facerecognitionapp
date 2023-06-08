@@ -105,6 +105,10 @@ class App extends Component {
       this.setState({input: event.target.value})
     }
 
+    onButtonClearInput = (event) => {
+      this.setState({input: ''});
+    }
+
     onButtonSubmit = () => {
       this.setState({imageUrl: this.state.input});
       fetch("https://api.clarifai.com/v2/models/" + "face-detection" + "/versions/" + "6dc7e46bc9124c5c8824be4822abe105" + "/outputs", returnClaReqOpt(this.state.input))
@@ -147,7 +151,7 @@ class App extends Component {
             ? <div>
                 <Logo /> 
                 <Rank name={this.state.user.name} entries={this.state.user.entries} />
-                <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
+                <ImageLinkForm  message={this.state.input}  onButtonClearInput={this.onButtonClearInput}  onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
                 <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
               </div>
              : (
