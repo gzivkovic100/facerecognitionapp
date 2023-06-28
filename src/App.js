@@ -9,8 +9,7 @@ import BackParticles from './components/BackParticles/BackParticles';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
-import './App.css';
-
+import centerImg from './images/centerImage.png';
 
 const returnClaReqOpt = (imageUrl) => {
   // Your PAT (Personal Access Token) can be found in the portal under Authentification
@@ -58,7 +57,7 @@ class App extends Component {
       super();
       this.state = {
         input: '',
-        imageUrl: '',
+        imageUrl: centerImg,
         box: {},
         route: 'signin',
         isSignedIn: false,
@@ -106,6 +105,7 @@ class App extends Component {
 
     onButtonClearInput = (event) => {
       this.setState({input: ''});
+      this.setState({imageUrl: centerImg});
     }
 
     onButtonSubmit = () => {
