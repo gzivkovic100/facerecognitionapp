@@ -5,7 +5,6 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
 import BackParticles from './components/BackParticles/BackParticles';
-
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
@@ -14,8 +13,6 @@ import centerImg from './images/centerImage.png';
 const returnClaReqOpt = (imageUrl) => {
   // Your PAT (Personal Access Token) can be found in the portal under Authentification
   const PAT = 'hier commes the PAT';
-  // Specify the correct user_id/app_id pairings
-  // Since you're making inferences outside your app's scope
   const USER_ID = 'moon1500';       
   const APP_ID = 'newFaceRec';
   // Change these to whatever model and image URL you want to use
@@ -145,7 +142,7 @@ class App extends Component {
       return (
         <div className="App">
           <BackParticles className='particles' />
-          <Navigation  isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} className='navigation' />
+          <Navigation  isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} />
           { this.state.route === 'home' 
             ? <div>
                 <Logo /> 
